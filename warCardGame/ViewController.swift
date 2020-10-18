@@ -12,13 +12,13 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var leftImageView: UIImageView!
-    
     @IBOutlet var rightImageView: UIImageView!
     
-    
     @IBOutlet var playerScoreLabel: UILabel!
-    
     @IBOutlet var cpuScoreLabel: UILabel!
+    
+    var leftScore = 0
+    var rightScore = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,23 @@ class ViewController: UIViewController {
 
     @IBAction func dealTapped(_ sender: Any) {
         
-        print("Deal Tapped")
+        //Random number generating
+        let leftRandom = Int.random(in: 2...14)
+        let rightRandom = Int.random(in: 2...14)
+        
+        //Update the image views
+        leftImageView.image = UIImage(named: "card\(leftRandom)")
+        rightImageView.image = UIImage(named: "card\(rightRandom)")
+        
+        //Comparing numbers and update scores
+        if leftRandom > rightRandom {
+            leftScore += 1
+            playerScoreLabel.text = String(leftScore)
+        }
+        else if leftRandom < rightRandom {
+            rightScore += 1
+            cpuScoreLabel.text = String(rightScore)
+        }
         
     }
     
