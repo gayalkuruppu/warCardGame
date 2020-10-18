@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,17 +12,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="warCardGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Zmc-Ik-77p">
-                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="14M-aa-Hcy" userLabel="logo">
-                                <rect key="frame" x="344" y="10" width="122" height="67"/>
+                                <rect key="frame" x="146" y="54" width="122" height="67"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BNy-NB-BRE" userLabel="cards and button SV">
-                                <rect key="frame" x="275" y="464.5" width="260" height="231"/>
+                                <rect key="frame" x="77" y="372.66666666666669" width="260" height="231.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W6e-s2-xyB" userLabel="cards SV">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="170"/>
@@ -36,22 +36,25 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LO-ak-hkr" userLabel="deal button">
-                                        <rect key="frame" x="89" y="200" width="82" height="31"/>
+                                        <rect key="frame" x="89.333333333333343" y="199.99999999999994" width="81.666666666666657" height="31"/>
                                         <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJu-7X-ZzQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="393-9D-ZDJ" userLabel="player score SV">
-                                <rect key="frame" x="30" y="968.5" width="72" height="81.5"/>
+                                <rect key="frame" x="30" y="750.66666666666663" width="72" height="81.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nd-Ft-vl8">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="32.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY6-SJ-Fly">
-                                        <rect key="frame" x="0.0" y="32.5" width="25.5" height="49"/>
+                                        <rect key="frame" x="0.0" y="32.333333333333371" width="25.333333333333332" height="49"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -59,16 +62,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="K2z-7P-Nua" userLabel="cpu score SV">
-                                <rect key="frame" x="726" y="968.5" width="54" height="81.5"/>
+                                <rect key="frame" x="330" y="750.66666666666663" width="54" height="81.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAM-Of-nUI">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="32.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22j-D1-J3k">
-                                        <rect key="frame" x="28.5" y="32.5" width="25.5" height="49"/>
+                                        <rect key="frame" x="28.666666666666686" y="32.333333333333371" width="25.333333333333329" height="49"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -93,6 +96,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cpuScoreLabel" destination="22j-D1-J3k" id="I6J-k8-0si"/>
+                        <outlet property="leftImageView" destination="EIn-xG-HlA" id="FOt-IJ-Np9"/>
+                        <outlet property="playerScoreLabel" destination="xY6-SJ-Fly" id="eTB-Yh-ym9"/>
+                        <outlet property="rightImageView" destination="7R9-gV-a0N" id="LxF-8b-iaV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +112,7 @@
         <image name="background" width="414" height="896"/>
         <image name="card2" width="120" height="170"/>
         <image name="card3" width="120" height="170"/>
-        <image name="dealbutton" width="82" height="31"/>
+        <image name="dealbutton" width="81.666664123535156" height="31"/>
         <image name="logo" width="122" height="67"/>
     </resources>
 </document>
